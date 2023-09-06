@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def NFLhome_view(request, *args, **kwargs):
-    return render(request, "pages/NFLfeed.html")
+def agents_view(request, *args, **kwargs):
+    return render(request, "pages/agents.html")
 
-def NFLtweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/NFLlist.html")
+def agents_list_view(request, *args, **kwargs):
+    return render(request, "tweets/agents.html")
 
-def NFLtweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/NFLdetail.html", context={"tweet_id": tweet_id})
+def agents_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/agents_detail.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.

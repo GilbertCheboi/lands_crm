@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EuropaConfig(AppConfig):
+class clients_documentsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Europa'
+    name = 'clients_documents'

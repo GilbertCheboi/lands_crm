@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class NbaConfig(AppConfig):
+class unitsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'NBA'
+    name = 'properties'

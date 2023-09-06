@@ -4,7 +4,6 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
 from .models import Profile, ChampionLeague, AfconLeague, Baseball, Bundesliga, Formula1, Laliga, NBA, NFL, Worldcup
-from tweets.models import Tweet
 #from tweets.serializers import TweetSerializer
 #from accounts.models import User
 

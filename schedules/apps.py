@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class LaligaConfig(AppConfig):
+class schedulesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Laliga'
+    name = 'schedules'

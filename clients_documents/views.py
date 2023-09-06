@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def Europahome_view(request, *args, **kwargs):
-    return render(request, "pages/Europafeed.html")
+def clients_documents_view(request, *args, **kwargs):
+    return render(request, "pages/clients_documents.html")
 
-def Europatweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/Europalist.html")
+def clients_documents_list_view(request, *args, **kwargs):
+    return render(request, "tweets/clients_documents_list.html")
 
-def Europatweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/Europadetail.html", context={"tweet_id": tweet_id})
+def clients_documents_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/clients_documents_detail.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.

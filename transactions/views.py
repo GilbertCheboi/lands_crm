@@ -8,11 +8,11 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def home_view(request, *args, **kwargs):
-    return render(request, "pages/feed.html")
+def transactions_view(request, *args, **kwargs):
+    return render(request, "pages/transactions.html")
 
-def tweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/list.html")
+def transactions_list_view(request, *args, **kwargs):
+    return render(request, "tweets/transacions_list.html")
 
-def tweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/detail.html", context={"tweet_id": tweet_id})
+def transactions_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/transactions_detail.html", context={"tweet_id": tweet_id})

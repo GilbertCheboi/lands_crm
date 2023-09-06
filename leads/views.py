@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def Bundesligahome_view(request, *args, **kwargs):
-    return render(request, "pages/Bundesligafeed.html")
+def leads_view(request, *args, **kwargs):
+    return render(request, "pages/leads.html")
 
-def Bundesligatweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/Bundesligalist.html")
+def leads_list_view(request, *args, **kwargs):
+    return render(request, "tweets/leads_list.html")
 
-def Bundesligatweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/Bundesligadetail.html", context={"tweet_id": tweet_id})
+def leads_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/leads_detail.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.

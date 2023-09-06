@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def Afconhome_view(request, *args, **kwargs):
-    return render(request, "pages/Afconfeed.html")
+def meetings_view(request, *args, **kwargs):
+    return render(request, "pages/meetings.html")
 
-def Afcontweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/Afconlist.html")
+def meetings_list_view(request, *args, **kwargs):
+    return render(request, "tweets/meetings_list.html")
 
-def Afcontweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/Afcondetail.html", context={"tweet_id": tweet_id})
+def meetings_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/meetings.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.

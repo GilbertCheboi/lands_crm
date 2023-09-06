@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def Baseballhome_view(request, *args, **kwargs):
-    return render(request, "pages/Baseballfeed.html")
+def tasks_view(request, *args, **kwargs):
+    return render(request, "pages/tasks.html")
 
-def Baseballtweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/Baseballlist.html")
+def tasks_list_view(request, *args, **kwargs):
+    return render(request, "tweets/tasks.html")
 
-def Baseballtweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/Baseballdetail.html", context={"tweet_id": tweet_id})
+def tasks_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/tasks_detail.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.

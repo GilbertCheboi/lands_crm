@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BaseballConfig(AppConfig):
+class tasksConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Baseball'
+    name = 'tasks'

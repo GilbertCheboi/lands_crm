@@ -8,14 +8,14 @@ from django.shortcuts import render, redirect
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 
 # Create your views here.
-def Formula1home_view(request, *args, **kwargs):
-    return render(request, "pages/Formula1feed.html")
+def clients_view(request, *args, **kwargs):
+    return render(request, "pages/clients.html")
 
-def Formula1tweets_list_view(request, *args, **kwargs):
-    return render(request, "tweets/Formula1list.html")
+def clients_list_view(request, *args, **kwargs):
+    return render(request, "tweets/clients_list.html")
 
-def Formula1tweets_detail_view(request, tweet_id, *args, **kwargs):
-    return render(request, "tweets/Formula1detail.html", context={"tweet_id": tweet_id})
+def clients_detail_view(request, tweet_id, *args, **kwargs):
+    return render(request, "tweets/clients_detail.html", context={"tweet_id": tweet_id})
 #from django.shortcuts import render
 
 # Create your views here.
