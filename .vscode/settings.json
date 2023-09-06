@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6cd542e1-b82c-48b2-b18d-d9faf0ebd539/AppServices/subscriptions/6cd542e1-b82c-48b2-b18d-d9faf0ebd539/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Gilscore",
+    "appService.deploySubpath": "."
+}
