@@ -25,11 +25,6 @@ from django.views.generic import TemplateView
 # from django.urls import path
 
 
-from agents.views import (
-    agents_view,
-    agents_list_view,
-    agents_detail_view,
-)
 
 from bookings.views import (
     bookings_view,
@@ -73,19 +68,13 @@ from transactions.views import (
     transactions_detail_view,
 )
 
-from properties.views import (
-    properties_view,
-    properties_list_view,
-    properties_detail_view,
-)
+
 
 
 
 urlpatterns = [
     #path('api/', include('accounts.urls')),
     
-    path('', properties_view),
-    path('agents/', agents_view),
     path('bookings/', bookings_view),
     path('clients/', clients_view),
     path('clients_documents/', clients_documents_view),
@@ -93,29 +82,18 @@ urlpatterns = [
     path('meetings/', meetings_view),
     path('schedules/', schedules_view),
     path('transactions/', transactions_view),
-    path('properties/', properties_view),
     path('tasks/', tasks_view),
     path('admin/', admin.site.urls),
     path('react/', TemplateView.as_view(template_name='react.html')),
-    # path('api/register/', RegisterAPI.as_view(), name='register'),
-    # path('api/login/', LoginAPI.as_view(), name='login'),
-    # path('api/logout/', knox_views.LogoutView.as_view(), name='logout'),
-    # path('api/logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
-    # path('login/', login_view),
-    # path('logout/', logout_view),
-    # path('register/', register_view),
-    path('agents/<int:tweet_id>/', agents_detail_view),
     path('bookings/<int:tweet_id>/', bookings_detail_view),
     path('clients/<int:tweet_id>/', clients_detail_view),
     path('clients_documents/<int:tweet_id>/', clients_documents_detail_view),
     path('leads/<int:tweet_id>/', leads_detail_view),
     path('meetings/<int:tweet_id>/', meetings_detail_view),
     path('schedules/<int:tweet_id>/', schedules_detail_view),
-    path('properties/<int:tweet_id>/', properties_detail_view),
     path('tasks/<int:tweet_id>/', tasks_detail_view),
     path('transactions/<int:tweet_id>/', transactions_detail_view),
     re_path(r'profiles?/', include('profiles.urls')),
-    path('api/agents/', include('agents.api.urls')),
     path('api/bookings/', include('bookings.api.urls')),
     path('api/clients/', include('clients.api.urls')),
     path('api/clients_documents/', include('clients_documents.api.urls')),
@@ -123,7 +101,6 @@ urlpatterns = [
     path('api/meetings/', include('meetings.api.urls')),
     path('api/schedules/', include('schedules.api.urls')),
     path('api/accounts/', include('accounts.api.urls')),
-    path('api/properties/', include('properties.api.urls')),
     path('api/tasks/', include('tasks.api.urls')),
     path('api/transactions/', include('transactions.api.urls')),
     re_path(r'api/profiles?/', include('profiles.api.urls')),

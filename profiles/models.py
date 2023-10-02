@@ -7,69 +7,7 @@ from django.db.models.signals import post_save
 User = settings.AUTH_USER_MODEL
 
 
-CLUB_CHOICES = (
-    ("", ""),
-    ("Manchester", "Manchester"),
-    ("Arsenal", "Arsenal"),
-    ("Liverpool", "Liverpool"),
-    ("Chelsea", "Chelsea"),
-)
 
-class ChampionLeague(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class EuropaLeague(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-class AfconLeague(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class Baseball(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class Bundesliga(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class Formula1(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class Laliga(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-class NBA(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-
-class NFL(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'
-
-class Worldcup(models.Model):
-    icon = models.ImageField(blank=True, null=True, upload_to='images/club')
-    def __str__(self):
-        return f'{self.icon.url}'        
 
 
 class FollowerRelation(models.Model):
@@ -80,17 +18,6 @@ class FollowerRelation(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField( blank=True, null=True,upload_to='images/')
-    clubimage = models.ImageField(max_length=220, choices= CLUB_CHOICES, default='Manchester')
-    location = models.CharField(max_length=220, null=True, blank=True)
-    Afcon = models.ForeignKey(AfconLeague, on_delete=models.CASCADE, default='', null=True)
-    Baseball = models.ForeignKey(Baseball, on_delete=models.CASCADE, default='', null=True)
-    Bundesliga = models.ForeignKey(Bundesliga, on_delete=models.CASCADE, default='', null=True)
-    Europa = models.ForeignKey(EuropaLeague, on_delete=models.CASCADE, default='', null=True)
-    Formula1 = models.ForeignKey(Formula1, on_delete=models.CASCADE, default='', null=True)
-    Laliga = models.ForeignKey(Laliga, on_delete=models.CASCADE, default='', null=True)
-    NBA = models.ForeignKey(NBA, on_delete=models.CASCADE, default='', null=True)
-    NFL = models.ForeignKey(NFL, on_delete=models.CASCADE, default='', null=True)
-    Worldcup = models.ForeignKey(Worldcup, on_delete=models.CASCADE, default='', null=True)
     First_Name = models.TextField(blank=True, null=True)
     Last_Name = models.TextField(blank=True, null=True)
     bio = models.TextField(blank=True, null=True)

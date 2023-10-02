@@ -12,7 +12,7 @@ from rest_framework.decorators import api_view, authentication_classes, permissi
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
-from ..models import Profile, Formula1
+from ..models import Profile
 from rest_framework.views import APIView
 from ..serializers import ProfileSerializer, PublicProfileSerializer
 User = get_user_model()
@@ -92,17 +92,9 @@ class UpdateUserProfileView(APIView):
             First_Name = data['First_Name']
             Last_Name = data['Last_Name']
             image = data['image']
-            #Afcon = data['Afcon']
-            # Baseball = data['Baseball']
-            # Bundesliga = data['Bundesliga']
-            # Europa = data['Europa']
-            # Formula1 = data['Formula1']
-            # Laliga = data['Laliga']
-            # NBA = data['NBA']
-            # NFL = data['NFL']
-            # Worldcup = data['Worldcup']
             bio = data['bio']
-            location = data['location']
+    
+
             
 
             user = User.objects.get(id=user.id)
@@ -110,17 +102,7 @@ class UpdateUserProfileView(APIView):
             image=image, 
             First_Name = First_Name,
             Last_Name = Last_Name,
-             #   Afcon=Afcon, 
-            #     Baseball=Baseball,
-            #  Bundesliga=Bundesliga,
-            #   Europa=Europa, 
-            #   Formula1=Formula1,
-            #    Laliga=Laliga, 
-            #    NBA=NBA, 
-            #    NFL=NFL, 
-            #    Worldcup=Worldcup,
-                bio=bio, 
-                location=location
+
                 )
 
             user_profile = Profile.objects.get(user=user)

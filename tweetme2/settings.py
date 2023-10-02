@@ -55,14 +55,12 @@ INSTALLED_APPS = [
     # internal
     'accounts',
     'profiles',
-    'agents',
     'bookings',
     'clients_documents',
     'clients',
     'leads',
     'meetings',
     'schedules',
-    'properties',
     'tasks',
     'transactions',
     
