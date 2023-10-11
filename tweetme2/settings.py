@@ -29,7 +29,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.25.107', '127.0.0.1','gilscore.azurewebsites.net', '172.31.26.131', '.cfe.sh', 'localhost']
+ALLOWED_HOSTS = ['49.13.2.122', '127.0.0.1','gilscore.azurewebsites.net', '172.31.26.131', '.cfe.sh', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://gilscore.azurewebsites.net']
 
 #ALLOWED_HOSTS = ['SportsApp.eba-h3jtbm88.us-west-2.elasticbeanstalk.com']
